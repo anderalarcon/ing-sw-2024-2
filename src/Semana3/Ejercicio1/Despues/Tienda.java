@@ -1,11 +1,14 @@
 package Semana3.Ejercicio1.Despues;
 
-public abstract class Tienda {
+public class Tienda {
 
-    public abstract Producto crearProducto();
-
-    public void mostrarProducto() {
-        Producto producto = crearProducto(); // Crear producto usando el método de fábrica
-        producto.mostrarDatos(); // Mostrar los datos del producto
+    public Producto crearProducto(String tipo) {
+        if (tipo.equals("electronico")) {
+            return new Producto("Smartphone", 500.0, 10.0);
+        } else if (tipo.equals("ropa")) {
+            return new Producto("Camisa", 30.0, 5.0);
+        } else {
+            return null;
+        }
     }
 }

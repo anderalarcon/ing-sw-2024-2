@@ -1,7 +1,6 @@
 package Semana2.Ejercicio3.Despues;
 
-
-public interface TrabajadorHumano {
+public interface Trabajador {
 
     void trabajar();
 
