@@ -1,6 +1,7 @@
 package Semana2.Ejercicio3.Despues;
 
-public class HumanoV1 implements Trabajador {
+
+public class HumanoV2 implements TrabajadorHumano {
 
     @Override
     public void trabajar() {

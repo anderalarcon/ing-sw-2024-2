@@ -1,6 +1,6 @@
 package Semana3.Ejercicio1.Despues;
 
-public class Producto {
+public abstract class Producto {
 
     private String nombre;
     private double precio;
@@ -17,5 +17,4 @@ public class Producto {
         System.out.println("Precio: $" + precio);
         System.out.println("Costo de envío: $" + costoEnvio);
     }
-
 }

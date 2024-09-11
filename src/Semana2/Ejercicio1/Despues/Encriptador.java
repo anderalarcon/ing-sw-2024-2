@@ -3,24 +3,9 @@ package Semana2.Ejercicio1.Despues;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class RegistroUsuariosV1 {
+public class Encriptador {
 
-    private String nombre;
-    private String contrasena;
-
-    public RegistroUsuariosV1(String nombre, String contrasena) {
-        this.nombre = nombre;
-        this.contrasena = contrasena;
-    }
-
-    public void registrarUsuario() {
-        // Lógica para guardar el usuario en la base de datos
-        System.out.println("Registrando usuario...");
-        System.out.println("Encriptando contraseña...");
-        System.out.println("Usuario registrado con nombre:" + nombre + " y contraseña: " + encriptarContrasena());
-    }
-
-    public String encriptarContrasena() {
+    public String encriptarContrasena(String contrasena) {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             byte[] hash = md.digest(contrasena.getBytes());
@@ -38,5 +23,4 @@ public class RegistroUsuariosV1 {
             return e.getMessage();
         }
     }
-
 }
