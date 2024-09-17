@@ -4,16 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
         Tienda tienda = new Tienda();
-        double precioOriginal = 100.0;
+        double precio = 100.0;
 
-        tienda.setEstrategiaDescuento(new DescuentoNavidad());
-        System.out.println("Precio con descuento NAVIDAD: $" + tienda.aplicarDescuento(precioOriginal));
+        // Aplicar descuento de Navidad
+        double descuentoNavidad = tienda.aplicarDescuento(precio, "Navidad");
+        System.out.println("Descuento NAVIDAD: $" + descuentoNavidad);
 
-        tienda.setEstrategiaDescuento(new DescuentoBlackFriday());
-        System.out.println("Precio con descuento BLACKFRIDAY: $" + tienda.aplicarDescuento(precioOriginal));
+        // Aplicar descuento de Black Friday
+        double descuentoBlackFriday = tienda.aplicarDescuento(precio, "BlackFriday");
+        System.out.println("Descuento BLACKFRIDAY: $" + descuentoBlackFriday);
 
-        tienda.setEstrategiaDescuento(new DescuentoVIP());
-        System.out.println("Precio con descuento VIP: $" + tienda.aplicarDescuento(precioOriginal));
+        // Aplicar descuento VIP
+        double descuentoVIP = tienda.aplicarDescuento(precio, "VIP");
+        System.out.println("Descuento VIP: $" + descuentoVIP);
     }
-
 }

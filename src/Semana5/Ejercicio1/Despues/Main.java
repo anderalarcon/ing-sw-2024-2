@@ -3,13 +3,11 @@ package Semana5.Ejercicio1.Despues;
 public class Main {
 
     public static void main(String[] args) {
-        GeneradorDeReportes generadorPDF = new GeneradorDeReportePDF();
-        generadorPDF.generarReporte();
+        GeneradorDeReportes generador = new GeneradorDeReportes();
 
-        GeneradorDeReportes generadorExcel = new GeneradorDeReporteExcel();
-        generadorExcel.generarReporte();
-
-        GeneradorDeReportes generadorHTML = new GeneradorDeReporteHTML();
-        generadorHTML.generarReporte();
+        // Genera diferentes tipos de reportes, según el parámetro
+        generador.generarReporte("PDF");
+        generador.generarReporte("Excel");
+        generador.generarReporte("HTML");
     }
 }
