@@ -2,10 +2,16 @@ package Semana9.Ejercicio3;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 public class ValidadorTest {
 
-    Validador validador = new Validador();
+    Validador validador;
+
+    @Before 
+    public void setUp() {
+        validador = new Validador();
+    }
 
     @Test
     public void correoTest() {
